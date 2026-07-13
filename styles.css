@@ -36,6 +36,35 @@ body {
     50% { opacity: 0.8; }
 }
 
+/* Shooting Star Animation */
+.shooting-star {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    background: radial-gradient(circle, #FFD700, #FFA500);
+    border-radius: 50%;
+    box-shadow: 0 0 15px #FFD700, 0 0 30px #FFA500;
+    pointer-events: none;
+    z-index: 1000;
+    animation: shootingStarAnimation 2s ease-in forwards;
+}
+
+@keyframes shootingStarAnimation {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+        box-shadow: 0 0 15px #FFD700, 0 0 30px #FFA500;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(500px, -500px) scale(0.5);
+        box-shadow: 0 0 5px #FFD700, 0 0 10px #FFA500;
+    }
+}
+
 .container {
     max-width: 800px;
     margin: 0 auto;
