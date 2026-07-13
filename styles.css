@@ -5,8 +5,8 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Comic Sans MS', 'Trebuchet MS', cursive, sans-serif;
+    background: linear-gradient(135deg, #FFB6D9 0%, #FFC0E3 50%, #FFD4E8 100%);
     min-height: 100vh;
     color: #333;
     overflow-x: hidden;
@@ -24,7 +24,7 @@ body {
 
 .star {
     position: absolute;
-    background: white;
+    background: #FFB6D9;
     border-radius: 50%;
     animation: twinkle 3s infinite;
 }
@@ -43,11 +43,12 @@ body {
 }
 
 .content {
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 30px;
     padding: 40px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 20px 60px rgba(255, 105, 180, 0.2);
     backdrop-filter: blur(10px);
+    border: 3px solid #FFB6D9;
 }
 
 /* Floating Hearts */
@@ -89,18 +90,19 @@ body {
 .romantic-title {
     text-align: center;
     font-size: 3.5em;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #FF69B4 0%, #FFB6D9 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 40px;
     animation: glow 2s ease-in-out infinite;
     letter-spacing: 2px;
+    font-weight: bold;
 }
 
 @keyframes glow {
-    0%, 100% { text-shadow: 0 0 10px rgba(102, 126, 234, 0.4); }
-    50% { text-shadow: 0 0 20px rgba(118, 75, 162, 0.6); }
+    0%, 100% { text-shadow: 0 0 10px rgba(255, 105, 180, 0.4); }
+    50% { text-shadow: 0 0 20px rgba(255, 182, 217, 0.6); }
 }
 
 /* Photo Gallery */
@@ -113,14 +115,15 @@ body {
 
 .photo-card {
     height: 250px;
-    border-radius: 15px;
+    border-radius: 20px;
     background-size: cover;
     background-position: center;
     position: relative;
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s ease;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.2);
+    border: 3px solid #FFB6D9;
 }
 
 .photo-card:hover {
@@ -131,7 +134,7 @@ body {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    background: linear-gradient(to top, rgba(255, 105, 180, 0.8), transparent);
     color: white;
     padding: 20px;
     text-align: center;
@@ -146,19 +149,20 @@ body {
 
 /* LONG MESSAGE SECTION */
 .long-message-section {
-    background: linear-gradient(135deg, #ffe6f0 0%, #fff0f6 100%);
+    background: linear-gradient(135deg, #FFE4F0 0%, #FFF0F6 100%);
     padding: 40px;
-    border-radius: 15px;
+    border-radius: 20px;
     margin: 40px 0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border-left: 5px solid #ff1493;
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.15);
+    border-left: 5px solid #FF69B4;
+    border: 3px solid #FFB6D9;
 }
 
 .message-header {
     font-size: 1.8em;
     margin-bottom: 30px;
     font-weight: bold;
-    color: #d63384;
+    color: #FF69B4;
     text-align: center;
 }
 
@@ -180,19 +184,19 @@ body {
 
 /* Love Letter */
 .love-letter {
-    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    background: linear-gradient(135deg, #FFE4F0 0%, #FFF0F6 100%);
     padding: 40px;
-    border-radius: 15px;
+    border-radius: 20px;
     margin: 40px 0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border-left: 5px solid #ff6b9d;
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.15);
+    border: 3px solid #FFB6D9;
 }
 
 .letter-header {
     font-size: 1.5em;
     margin-bottom: 20px;
     font-weight: bold;
-    color: #d63384;
+    color: #FF69B4;
 }
 
 .letter-text {
@@ -209,7 +213,7 @@ body {
 .timeline h2 {
     text-align: center;
     margin-bottom: 30px;
-    color: #764ba2;
+    color: #FF69B4;
     font-size: 1.8em;
 }
 
@@ -217,7 +221,7 @@ body {
     position: relative;
     padding-left: 40px;
     margin: 20px 0;
-    border-left: 3px solid #667eea;
+    border-left: 3px solid #FFB6D9;
 }
 
 .timeline-item::before {
@@ -228,13 +232,13 @@ body {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background: #667eea;
-    box-shadow: 0 0 0 4px #fff, 0 0 0 8px #667eea;
+    background: #FF69B4;
+    box-shadow: 0 0 0 4px #fff, 0 0 0 8px #FFB6D9;
 }
 
 .timeline-date {
     font-weight: bold;
-    color: #764ba2;
+    color: #FF69B4;
     margin-bottom: 5px;
     font-size: 1.1em;
 }
@@ -247,7 +251,7 @@ body {
 .reasons-section h2 {
     text-align: center;
     margin-bottom: 30px;
-    color: #764ba2;
+    color: #FF69B4;
     font-size: 1.8em;
 }
 
@@ -259,13 +263,15 @@ body {
 }
 
 .reason-card {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #FFB6D9 0%, #FFC0E3 100%);
     color: white;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
     text-align: center;
     font-size: 0.95em;
     transition: transform 0.3s ease;
+    border: 2px solid #FF69B4;
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.2);
 }
 
 .reason-card:hover {
@@ -279,7 +285,7 @@ body {
 }
 
 .wish-section h2 {
-    color: #764ba2;
+    color: #FF69B4;
     margin-bottom: 20px;
     font-size: 1.8em;
 }
@@ -287,17 +293,18 @@ body {
 .wish-input {
     width: 100%;
     padding: 15px;
-    border: 2px solid #667eea;
-    border-radius: 10px;
+    border: 3px solid #FFB6D9;
+    border-radius: 15px;
     font-size: 1em;
     margin-bottom: 15px;
     transition: border-color 0.3s ease;
+    background: #FFF5FA;
 }
 
 .wish-input:focus {
     outline: none;
-    border-color: #764ba2;
-    box-shadow: 0 0 10px rgba(118, 75, 162, 0.3);
+    border-color: #FF69B4;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
 }
 
 /* Music Section */
@@ -307,14 +314,14 @@ body {
 }
 
 .music-section h2 {
-    color: #764ba2;
+    color: #FF69B4;
     margin-bottom: 20px;
     font-size: 1.8em;
 }
 
 /* Buttons */
 .btn-wish, .btn-music, .btn-show-more {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #FF69B4 0%, #FFB6D9 100%);
     color: white;
     border: none;
     padding: 12px 30px;
@@ -324,11 +331,12 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin: 10px;
     font-weight: bold;
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.2);
 }
 
 .btn-wish:hover, .btn-music:hover, .btn-show-more:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 10px 25px rgba(255, 105, 180, 0.4);
 }
 
 /* Final Message */
@@ -336,12 +344,13 @@ body {
     text-align: center;
     margin-top: 40px;
     padding: 30px;
-    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-    border-radius: 15px;
+    background: linear-gradient(135deg, #FFE4F0 0%, #FFF0F6 100%);
+    border-radius: 20px;
     font-size: 1.2em;
     font-weight: bold;
-    color: #d63384;
+    color: #FF69B4;
     line-height: 1.8;
+    border: 3px solid #FFB6D9;
 }
 
 /* Responsive */
