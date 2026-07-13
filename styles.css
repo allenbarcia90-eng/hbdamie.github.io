@@ -417,3 +417,170 @@ body {
         text-align: left;
     }
 }
+
+/* ===================== */
+/* Confirmation Gate */
+/* ===================== */
+.gate-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 5000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #FFB6D9 0%, #FFC0CB 25%, #FFD4E8 50%, #FFC0E3 75%, #FFB6D9 100%);
+    overflow: hidden;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.gate-overlay.gate-hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.gate-stars {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.gate-box {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.55);
+    padding: 50px 40px;
+    border-radius: 30px;
+    border: 4px solid #FF69B4;
+    box-shadow: 0 15px 40px rgba(255, 105, 180, 0.4);
+    max-width: 90vw;
+    animation: gatePop 0.6s ease;
+}
+
+@keyframes gatePop {
+    0% { transform: scale(0.7); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.gate-heart {
+    font-size: 3em;
+    animation: heartbeat 1.3s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.gate-question {
+    font-family: 'Comic Sans MS', 'Trebuchet MS', cursive, sans-serif;
+    font-size: 2em;
+    color: #FF1493;
+    margin: 15px 0 5px;
+    text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.3);
+}
+
+.gate-sub {
+    color: #C2185B;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.gate-buttons {
+    position: relative;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    min-height: 60px;
+}
+
+.btn-yes, .btn-no {
+    padding: 14px 32px;
+    font-size: 1.1em;
+    font-family: inherit;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.btn-yes {
+    background: linear-gradient(135deg, #FF69B4 0%, #FF1493 100%);
+    color: white;
+    box-shadow: 0 6px 15px rgba(255, 20, 147, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-yes:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 22px rgba(255, 20, 147, 0.65);
+}
+
+.btn-no {
+    background: #fff;
+    color: #FF69B4;
+    border: 2px solid #FF69B4;
+    transition: left 0.25s ease, top 0.25s ease, transform 0.15s ease;
+}
+
+.btn-no.dodging {
+    position: fixed;
+}
+
+/* Fade the main content in only after confirmation */
+.container {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.container.reveal {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* ===================== */
+/* Wishing Star Flight */
+/* ===================== */
+.wishing-star {
+    position: fixed;
+    z-index: 4000;
+    pointer-events: none;
+    font-size: 34px;
+    line-height: 1;
+    filter: drop-shadow(0 0 8px #FFD700) drop-shadow(0 0 18px #FFA500);
+    will-change: transform, opacity;
+}
+
+.wishing-star .wish-label {
+    position: absolute;
+    top: -8px;
+    left: 45px;
+    white-space: nowrap;
+    font-family: 'Comic Sans MS', 'Trebuchet MS', cursive, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #FF69B4;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 4px 12px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(255, 105, 180, 0.4);
+}
+
+.wish-sparkle {
+    position: fixed;
+    z-index: 3999;
+    pointer-events: none;
+    border-radius: 50%;
+    background: radial-gradient(circle, #FFF6C6, #FFD700 60%, transparent 70%);
+    animation: sparkleFade 0.9s ease-out forwards;
+}
+
+@keyframes sparkleFade {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0.2); }
+}
