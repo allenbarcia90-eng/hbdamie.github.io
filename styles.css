@@ -146,36 +146,58 @@ body {
 .photo-card {
     height: 250px;
     border-radius: 20px;
-    background-size: cover;
-    background-position: center;
     position: relative;
-    overflow: hidden;
     cursor: pointer;
-    transition: transform 0.3s ease;
     box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
     border: 4px solid #FF69B4;
+    perspective: 1200px;
+    transition: transform 0.3s ease;
 }
 
 .photo-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
-.photo-overlay {
-    position: absolute;
-    bottom: 0;
+.photo-flip-inner {
+    position: relative;
     width: 100%;
-    background: linear-gradient(to top, rgba(255, 105, 180, 0.9), transparent);
-    color: white;
-    padding: 20px;
+    height: 100%;
     text-align: center;
-    font-size: 0.9em;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    font-weight: bold;
+    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transform-style: preserve-3d;
+    border-radius: 16px;
 }
 
-.photo-card:hover .photo-overlay {
-    opacity: 1;
+.photo-card.flipped .photo-flip-inner {
+    transform: rotateY(180deg);
+}
+
+.photo-front,
+.photo-back {
+    position: absolute;
+    inset: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.photo-front {
+    background-size: cover;
+    background-position: center;
+}
+
+.photo-back {
+    transform: rotateY(180deg);
+    background: linear-gradient(135deg, #FF9ECF 0%, #FF69B4 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    font-weight: bold;
+    font-size: 1.05em;
+    line-height: 1.5;
 }
 
 /* LONG MESSAGE SECTION */
