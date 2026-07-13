@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday Amie 💕</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
     <!-- Confirmation Gate -->
@@ -33,14 +33,23 @@
             
             <!-- Photo Gallery Section -->
             <div class="photo-gallery">
-                <div class="photo-card" style="background-image: url('image1.jpg');">
-                    <div class="photo-overlay">Your smile brightens my day</div>
+                <div class="photo-card" onclick="this.classList.toggle('flipped')">
+                    <div class="photo-flip-inner">
+                        <div class="photo-front" style="background-image: url('image1.jpg');"></div>
+                        <div class="photo-back">eto yung time na muntik nanaman tayo mag away</div>
+                    </div>
                 </div>
-                <div class="photo-card" style="background-image: url('image2.jpg');">
-                    <div class="photo-overlay">Every moment with you is precious</div>
+                <div class="photo-card" onclick="this.classList.toggle('flipped')">
+                    <div class="photo-flip-inner">
+                        <div class="photo-front" style="background-image: url('image2.jpg');"></div>
+                        <div class="photo-back">eto yung paldo days natin kamiss</div>
+                    </div>
                 </div>
-                <div class="photo-card" style="background-image: url('image3.jpg');">
-                    <div class="photo-overlay">You make my heart skip a beat</div>
+                <div class="photo-card" onclick="this.classList.toggle('flipped')">
+                    <div class="photo-flip-inner">
+                        <div class="photo-front" style="background-image: url('image3.jpg');"></div>
+                        <div class="photo-back">last day ng pagiging paldo natin huhu sana yumaman na tayo</div>
+                    </div>
                 </div>
             </div>
             
@@ -88,6 +97,6 @@
     
     <div id="starLayer"></div>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=3"></script>
 </body>
 </html>
