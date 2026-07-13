@@ -7,9 +7,23 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Confirmation Gate -->
+    <div class="gate-overlay" id="gateOverlay">
+        <div class="gate-stars"></div>
+        <div class="gate-box">
+            <div class="gate-heart">💗</div>
+            <h1 class="gate-question">Are you my girlfriend?</h1>
+            <p class="gate-sub">(be honest lab 👀)</p>
+            <div class="gate-buttons" id="gateButtons">
+                <button class="btn-yes" id="btnYes">Yes 💕</button>
+                <button class="btn-no" id="btnNo">No</button>
+            </div>
+        </div>
+    </div>
+
     <div class="stars"></div>
     
-    <div class="container">
+    <div class="container" id="mainContainer">
         <div class="content">
             <!-- Floating Hearts -->
             <div class="hearts-container" id="hearts"></div>
@@ -72,6 +86,8 @@
         </div>
     </div>
     
+    <div id="starLayer"></div>
+
     <script src="script.js"></script>
 </body>
 </html>
